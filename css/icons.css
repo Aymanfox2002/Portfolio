@@ -1,0 +1,83 @@
+/* User icon */
+
+.target-row .user span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.target-row .user span::after{
+content: "";
+position: absolute;
+bottom: -33px;
+left: 50%;
+transform: translateX(-50%);
+width: 38px;
+height: 26px;
+border-radius: 50%;
+background-color: green;
+}
+
+/* Start icon-total */
+.icon-total{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 3px solid orange;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-total > span{
+    position: relative;
+    display: block;
+    margin:0;
+    width: 60%;
+    height: 4px;
+    background-color: orange;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+.icon-total > span::before{
+   content: "";
+   position: absolute;
+   width: 5px;
+   height: 5px;
+   background-color: orange;
+   left: -6px;
+   top: 50%;
+   border-radius: 50%;
+   transform: translateY(-50%);
+}
+.icon-pending{
+    width: 20px;
+    height: 20px;
+    border-radius: 40%;
+    border: 6px dotted var(--blue-color);
+    box-sizing: content-box;
+    border-right-color: transparent;
+    transform: rotate(-44deg);
+}
+/* End icon-total */
+/* start icon-check */
+.icon-check{
+    width: 50px;
+    height: 50px;
+    border: 4px solid green;
+    border-radius: 50%;
+    font-size: 26px;
+    color: #0a810a;
+}
+/* End icon-check */
+/* start icon-cross */
+.icon-cross{
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgb(206, 60, 60);
+    border-radius: 11px;
+    font-size: 26px;
+    color: rgb(206, 60, 60);
+}
+/* End icon-cross */
