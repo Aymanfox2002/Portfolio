@@ -135,6 +135,18 @@ transform: translateX(-50%);
     }
 }
 /* End Sidebar */
+
+.head .list i{
+        background-color: #f5f6f5;
+    padding: 5px;
+    border-radius: 10px;
+}
+.head .list i:hover{
+    background-color: #eeeeee;
+    transition: .3s;
+    cursor: pointer;
+}
+
 /* Start Content*/
 .content{
     overflow: hidden;
