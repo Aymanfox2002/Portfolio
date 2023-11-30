@@ -1,2 +1,5 @@
 # Portfolio
-My portfolio to show you my projects
+My portfolio to show you my projects.
+
+# ToDo:
+<li>sample element</li>
