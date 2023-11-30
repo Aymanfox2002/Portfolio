@@ -7,7 +7,7 @@
     --grey-color:#888;
 }
 *{
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     margin: 0;
 }
 
@@ -54,7 +54,11 @@ ul{
 .sidebar{
     width: 250px;
     box-shadow: 0 0 10px #ddd;
-    display: none;
+    z-index: 10;
+    height: 100vh;
+    position: fixed;
+    left: -300px;
+    transition: .1s;
 }
 
 .sidebar span .close{
@@ -99,41 +103,36 @@ transform: translateX(-50%);
     transform: translateX(-50%) rotate(45deg);
 }
 
+.sidebar ul{
+    font-family: "Caesar Dressing";
+}
+
+
 .sidebar ul li a{
     margin-bottom: 10px;
     transition: .3s;
 }
+
+.sidebar ul li span {
+color: #6b6b6b;
+font-size: 15px;
+
+}
+
+
 .sidebar ul li a:hover,.sidebar ul li a.active{
-    background-color: #f6f6f6;
+    background-color: #f6f6f6a1;
     cursor: pointer;
 }
-.sidebar ul span:first-of-type{
-    padding: 8px;
-    border-radius: 25%;
-    background-color: #cfcfcf;
-    color: white;
-    margin-right: 10px;
+.sidebar ul li i:first-of-type{
+    width: 30px;
+    font-size: 22px;
+    margin-right: 20px;
 }
-.sidebar ul span:last-of-type{
+.sidebar ul  span:last-of-type{
     font-weight: bold;
 }
 
-@media (max-width:600px) {
-    .sidebar{
-        width: 95px;
-    }
-    .sidebar ul span:last-of-type{
-        display: none;
-    }
-    .sidebar h3{
-        font-size: 18px;
-        margin-bottom: 36px;
-        }
-    .sidebar h3::before,.sidebar h3::after{
-        display: none;
-
-    }
-}
 /* End Sidebar */
 
 .head .list i{
@@ -147,6 +146,9 @@ transform: translateX(-50%);
     cursor: pointer;
 }
 
+.head{
+position: sticky;
+}
 /* Start Content*/
 .content{
     overflow: hidden;
@@ -924,7 +926,7 @@ transition: .3s;
         /* End Backup Manager */
         /* Profile Page ⭕ */
         .profile-page{
-            grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(437px, 1fr));
         }
         /* Start Overview*/
         .overview{
@@ -1142,7 +1144,7 @@ transition: .3s;
         /* Start Friends */
 
         .friends-page .friend .header img{
-            width: 15px;
+            width: 25px;
             background-color: #eee;
             padding: 3px;
             border-radius: 50%;
@@ -1343,8 +1345,8 @@ transition: .3s;
             .plans-page .cross{
                 position: relative;
                 margin-left: auto;
-                width: 10px;
-                height: 10px;
+                width: 20px;
+                height: 20px;
                 border-radius: 50%;
                 background-color: #eee;
                 padding: 2px;
